@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
-  <title id="title">Evidence: published Nemotron pilot timeline</title>
-  <desc id="desc">The actual 1864-frame pilot has six shots spanning 62.14 seconds. Four adapt Shotcraft cards, two show source evidence, and the film uses five NVIDIA Magpie narration clips.</desc>
+  <title id="title">Evidence: published Nemotron sample video timeline</title>
+  <desc id="desc">The actual 1864-frame sample video has six shots spanning 62.14 seconds. Four adapt Shotcraft cards, two show source evidence, and the film uses five NVIDIA Magpie narration clips.</desc>
   <defs>
     <style>
       text{font-family:Arial,Helvetica,sans-serif;fill:#1d2b2a}
@@ -9,7 +9,7 @@
     </style>
   </defs>
   <rect width="1000" height="520" fill="#fbfcfa"/>
-  <text x="42" y="57" class="title">Evidence · published Nemotron pilot</text>
+  <text x="42" y="57" class="title">Evidence · published Nemotron sample</text>
   <text x="42" y="85" class="sub">Actual render · 1,864 frames · 30 fps · 1920 × 1080 · 62.14 seconds</text>
   <path d="M42 110H958" stroke="#bdcbc6"/>
   <text x="42" y="143" class="small">0:00</text><text x="911" y="143" class="small">1:02</text>
@@ -38,5 +38,5 @@
   <text x="671" y="373" class="tag">06 · SHOTCRAFT</text><text x="671" y="392" class="small">Magpie voice credit · 10.67 s</text>
   <text x="42" y="439" class="label">Voice: NVIDIA Magpie TTS Multilingual · Aria · five bundled WAVs</text>
   <path d="M42 475H958" stroke="#bdcbc6"/>
-  <text x="42" y="497" class="small">Sources: pilot manifest and shot map · target commit 9c2bc01 · timings from the final 1,864-frame composition</text>
+  <text x="42" y="497" class="small">Sources: sample manifest and shot map · target commit 9c2bc01 · timings from the final 1,864-frame composition</text>
 </svg>
