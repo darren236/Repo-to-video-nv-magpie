@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-labelledby="title desc">
+  <title id="title">Methods: from a Git repository to a narrated video</title>
+  <desc id="desc">Three panels show source inspection, Claude storyboard drafting, and NVIDIA Magpie voice synthesis followed by Remotion rendering.</desc>
+  <defs>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#1d2b2a}
+      .title{font-size:28px;font-weight:700}.sub{font-size:16px;fill:#586966}.panel{fill:#fff;stroke:#bdcbc6}
+      .letter{font-size:27px;font-weight:700;fill:#176d5a}.head{font-size:17px;font-weight:700;fill:#586966;letter-spacing:1px}
+      .main{font-size:19px;font-weight:700}.body{font-size:16px}.small{font-size:14px;fill:#586966}.accent{fill:#176d5a;font-weight:700}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#176d5a"/></marker>
+  </defs>
+  <rect width="1000" height="500" fill="#fbfcfa"/>
+  <text x="42" y="57" class="title">Methods · from repository to film</text>
+  <text x="42" y="85" class="sub">The implemented CLI path, with a review point before synthesis</text>
+  <path d="M42 110H958" stroke="#bdcbc6"/>
+  <rect x="42" y="130" width="290" height="310" rx="6" class="panel"/>
+  <rect x="350" y="130" width="290" height="310" rx="6" class="panel"/>
+  <rect x="658" y="130" width="300" height="310" rx="6" class="panel"/>
+  <path d="M333 282H346M641 282H654" stroke="#176d5a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="62" y="174" class="letter">A</text><text x="100" y="171" class="head">SOURCE</text>
+  <rect x="62" y="208" width="250" height="66" rx="4" fill="#f2f5f3" stroke="#bdcbc6"/>
+  <text x="79" y="247" class="main">Git repository</text>
+  <text x="63" y="315" class="body">Tracked text files</text>
+  <text x="63" y="350" class="body">Excerpts + SHA-256 hashes</text>
+  <text x="63" y="403" class="small">Output: evidence.json</text>
+  <text x="370" y="174" class="letter">B</text><text x="408" y="171" class="head">STORY</text>
+  <rect x="370" y="208" width="250" height="66" rx="4" fill="#e8f2ee" stroke="#176d5a"/>
+  <text x="387" y="247" class="main">Claude CLI</text>
+  <text x="371" y="315" class="body">Five-scene storyboard</text>
+  <text x="371" y="350" class="body">Review and edit JSON</text>
+  <text x="371" y="403" class="small">Output: storyboard.json</text>
+  <text x="678" y="174" class="letter">C</text><text x="716" y="171" class="head">PRODUCTION</text>
+  <rect x="678" y="196" width="260" height="70" rx="4" fill="#e8f2ee" stroke="#176d5a"/>
+  <text x="694" y="226" class="main">NVIDIA Magpie TTS</text>
+  <text x="694" y="250" class="small">Narration WAVs · Aria default</text>
+  <path d="M808 268V292" stroke="#176d5a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="678" y="302" width="260" height="70" rx="4" fill="#f2f5f3" stroke="#bdcbc6"/>
+  <text x="694" y="332" class="main">Remotion</text>
+  <text x="694" y="356" class="small">Scenes + WAVs → 1080p MP4</text>
+  <text x="698" y="408" class="body accent">MP4 + estimated SRT</text>
+  <path d="M42 459H958" stroke="#bdcbc6"/>
+  <text x="42" y="480" class="small">Sources: repo_video.py · video/src/root.tsx · NVIDIA Magpie TTS and Remotion documentation</text>
+</svg>

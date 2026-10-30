@@ -1,31 +1,83 @@
-# Usage
+# User guide
 
-## Generate a video
+Repo-to-video turns a Git repository into a short narrated MP4. The CLI gathers source excerpts, asks Claude for an editable storyboard, sends the reviewed narration text to NVIDIA Magpie TTS Multilingual, and renders scenes with Remotion. The bundled [Nemotron pilot](https://darren236.github.io/Repo-to-video-nv-magpie/) shows the more tailored Shotcraft production route.
 
-`prepare` accepts a local Git repository or a plain public GitHub repository URL. It reads selected tracked text files, records file hashes, and asks the authenticated Claude CLI for a five-scene storyboard. Review `projects/demo/evidence.json` and edit `storyboard.json` before rendering.
+## How it works
+
+![Methods diagram: tracked repository files become a reviewed storyboard, Magpie narration, and a Remotion video](methods.svg)
+
+**Methods.** `prepare` selects tracked text, records SHA-256 hashes, and drafts five scenes. Review the source evidence and storyboard before `render`. The renderer synthesizes one WAV per scene, then creates the MP4 and estimated SRT captions. [Implementation](../repo_video.py).
+
+![Evidence diagram: six real shots in the published Nemotron pilot, plus the source assets and Magpie voice](evidence.svg)
+
+**Published example.** The 62.14-second pilot has six visual shots: four adapted [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) cards and two source proof shots. It includes saved inference results, the target repository's own methods SVG, a real caption clip, and five Magpie narration WAVs. The final shot credits NVIDIA Magpie TTS Multilingual. See the [shot map](../examples/nemotron-transcribe-pilot/shot-map.md) and [manifest](../examples/nemotron-transcribe-pilot/manifest.json) for exact source commits and hashes.
+
+![System diagram: local repository and Remotion stages connected to the Claude CLI and hosted NVIDIA Magpie TTS](system.svg)
+
+**System boundary.** The repository, evidence, storyboard, WAVs, and Remotion render live in this project. Claude CLI drafts the story; NVIDIA Magpie TTS Multilingual synthesizes the voice. The Magpie box represents the hosted service, without claiming anything about its internal architecture.
+
+## Set up
+
+You need Python 3.10+, Git, Node.js with npm, an authenticated `claude` CLI, and access to [NVIDIA Magpie TTS Multilingual](https://build.nvidia.com/nvidia/magpie-tts-multilingual/api). Install the pinned Remotion dependencies from the repository root:
 
 ```bash
-python3 repo_video.py prepare /path/to/repo --out projects/demo
+cd video
+npm ci
+cd ..
+```
+
+Set `NVIDIA_API_KEY` in your environment or in a local `.env` file at the repository root. The `.env` file and generated `projects/` directory are ignored by Git. Do not commit your key.
+
+## Make a video
+
+Use a local Git repository or a plain public GitHub repository URL. `prepare` requires a **new** output directory:
+
+```bash
+python3 repo_video.py prepare /path/to/source-repo --out projects/demo
+# Or: python3 repo_video.py prepare https://github.com/owner/repo --out projects/demo
+```
+
+Read `projects/demo/evidence.json` for the selected file excerpts and hashes. Edit `projects/demo/storyboard.json` for factual accuracy, pacing, pronunciation, and scene visuals. Each scene cites paths in the evidence file. The CLI validates the scene count and narration length when it prepares and renders.
+
+Render with the default Remotion style and Aria voice:
+
+```bash
 python3 repo_video.py render projects/demo
 ```
 
-`render` requests five WAV clips from NVIDIA Magpie TTS Multilingual using the default `Magpie-Multilingual.EN-US.Aria` voice, then makes a 1080p MP4 with Remotion. Set `NVIDIA_API_KEY` in your environment or in a local `.env` file; `.env` and `projects/` are ignored by Git. Rendering also saves approximate sentence-timed `captions.srt`, `manifest.json`, and source evidence. Check the script, claims, and caption timing before sharing the result.
+The result is `projects/demo/video.mp4`. The directory also contains `audio/scene-*.wav`, `captions.srt`, `render-props.json`, and `manifest.json`. Captions use sentence-length estimates; review their timing before publishing. The manifest records the source commit, selected file hashes, voice, template, duration, and MP4 hash. A rendered project cannot be rendered again with the same `render` command; make a new output directory for another source run.
 
-## Visual choices
+## Choose a visual route
 
-The CLI defaults to `standard`. For a paper-and-ink style adapted from Shotcraft motion ideas, use `--template shotcraft-ink` on `render`, or restyle existing narration without another TTS request:
+| Route | Use it for | Command or source |
+| --- | --- | --- |
+| `standard` | A quick, editable five-scene explainer | `python3 repo_video.py render projects/demo` |
+| `shotcraft-ink` | The same script with a paper-and-ink Remotion treatment inspired by Shotcraft motion | `python3 repo_video.py render projects/demo --template shotcraft-ink` |
+| Shotcraft production | A custom film that adapts actual Shotcraft template or shot implementations to real repo media | [Video-creator skill](../skills/video-creator/SKILL.md) and [pilot source](../video/src/shotcraft-production.tsx) |
+
+The CLI templates are its own Remotion implementations. For the third route, inspect the pinned Shotcraft references, select fitting shots, adapt their actual motion and source code, and record the mapping. The pilot follows that route; its [shot map](../examples/nemotron-transcribe-pilot/shot-map.md) distinguishes adapted cards from plain Remotion proof shots.
+
+To change only the CLI video's visual style, reuse the saved narration without another Magpie request:
 
 ```bash
 python3 repo_video.py rerender projects/demo --template shotcraft-ink
 ```
 
-For a film built from [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft)'s actual shot implementations, follow the [video-creator skill](../skills/video-creator/SKILL.md). The [Nemotron pilot](../examples/nemotron-transcribe-pilot/pilot.mp4) uses that route. Its [manifest](../examples/nemotron-transcribe-pilot/manifest.json) records the source commit, Shotcraft revision, voice, and media hashes. Rebuild the bundled example from `video/` without another Magpie request:
+This writes `video-shotcraft-ink.mp4` and its manifest beside the original output. For a different narrator, use `--voice` with `render` on a new project; the default is `Magpie-Multilingual.EN-US.Aria`. Check available voices in the [NVIDIA API reference](https://build.nvidia.com/nvidia/magpie-tts-multilingual/api).
+
+## Inspect or rebuild the bundled pilot
+
+[Watch the pilot](https://darren236.github.io/Repo-to-video-nv-magpie/), view its [poster](../examples/nemotron-transcribe-pilot/poster.png), or inspect the [contact sheet](../examples/nemotron-transcribe-pilot/contact-sheet.png). The [manifest](../examples/nemotron-transcribe-pilot/manifest.json) identifies the target source commit, Shotcraft revision, Magpie voice, and hashes for the bundled media. The original storyboard and Magpie WAVs were created from an earlier source commit; the [shot map](../examples/nemotron-transcribe-pilot/shot-map.md) explains the later source refresh.
+
+From `video/`, rebuild the editable Remotion composition with the bundled WAVs and media. This render does not request new speech:
 
 ```bash
 mkdir -p ../projects/nemotron-transcribe-pilot
 npx remotion render src/index.ts ShotcraftPilot ../projects/nemotron-transcribe-pilot/pilot.mp4
 ```
 
-## Source and privacy
+## Source and sharing
 
-`prepare` skips common secret paths, binary assets, and lines resembling credentials, but these filters are not a guarantee. Inspect `evidence.json` before using confidential repositories: selected excerpts go to Claude, and narration text goes to NVIDIA. The input repository is never modified. The CLI does not record an app's UI or publish the output.
+`prepare` skips common secret paths, binary assets, and lines resembling credentials, but the filters are not a guarantee. Inspect `evidence.json` before processing a confidential repository: selected excerpts go to Claude, and narration text goes to NVIDIA. The input repository is not modified. The CLI does not capture a running UI or publish the result. Verify claims, media rights, audio, and caption timing before sharing.
+
+This project's original code and documentation use the [MIT License](../LICENSE). Adapted Shotcraft material retains its [Apache 2.0 notice](../THIRD_PARTY_NOTICES.md).

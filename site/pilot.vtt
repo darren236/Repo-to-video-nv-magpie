@@ -1,0 +1,49 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.808
+This repository demonstrates NVIDIA Nemotron 3.5 Transcribe on a single H one hundred GPU.
+
+2
+00:00:06.808 --> 00:00:15.582
+Three real inference recordings show timed captions: a two-person conversation, a historical speech, and NASA radio.
+
+3
+00:00:15.582 --> 00:00:18.292
+NeMo Speech and vLLM serve the model.
+
+4
+00:00:18.292 --> 00:00:24.078
+Python scripts submit audio, save responses, verify timing, and build captions.
+
+5
+00:00:24.078 --> 00:00:27.960
+Remotion turns those saved results into short videos.
+
+6
+00:00:27.960 --> 00:00:31.691
+A mono wave file enters the transcription request.
+
+7
+00:00:31.691 --> 00:00:37.213
+The saved JSON includes text, word times, speaker tags, and an audio hash.
+
+8
+00:00:37.213 --> 00:00:40.570
+Caption export checks the hash and alignment.
+
+9
+00:00:40.570 --> 00:00:44.934
+The conversation demo runs thirty-four seconds and has six speaker turns.
+
+10
+00:00:44.934 --> 00:00:51.509
+Its subtitle script groups aligned words by speaker, sentence ending, and pause, making the timeline readable.
+
+11
+00:00:51.509 --> 00:00:55.847
+Each clip remains tied to the audio and raw response that produced it.
+
+12
+00:00:55.847 --> 00:01:02.144
+The output is unedited, including errors, so the radio transcript needs listening review before reuse.

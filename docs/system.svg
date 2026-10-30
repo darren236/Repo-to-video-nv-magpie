@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">System: local pipeline and external services</title>
+  <desc id="desc">A Git repository passes through the local prepare script, Claude CLI, and reviewed storyboard. The render script calls hosted NVIDIA Magpie TTS for WAV narration, then local Remotion produces an MP4 and SRT.</desc>
+  <defs>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#1d2b2a}
+      .title{font-size:28px;font-weight:700}.sub{font-size:16px;fill:#586966}.tag{font-size:12px;font-weight:700;fill:#176d5a;letter-spacing:.4px}
+      .head{font-size:18px;font-weight:700}.body{font-size:14px;fill:#586966}.small{font-size:13px;fill:#586966}
+      .box{fill:#f2f5f3;stroke:#bdcbc6}.hosted{fill:#e8f2ee;stroke:#176d5a}.route{fill:none;stroke:#176d5a;stroke-width:2}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#176d5a"/></marker>
+  </defs>
+  <rect width="1000" height="520" fill="#fbfcfa"/>
+  <text x="42" y="57" class="title">System · who does what</text>
+  <text x="42" y="85" class="sub">Local files, model services, and the render handoff</text>
+  <path d="M42 110H958" stroke="#bdcbc6"/>
+  <g class="box">
+    <rect x="42" y="145" width="205" height="90" rx="5"/>
+    <rect x="278" y="145" width="205" height="90" rx="5"/>
+    <rect x="750" y="145" width="208" height="90" rx="5"/>
+    <rect x="278" y="323" width="205" height="90" rx="5"/>
+    <rect x="514" y="323" width="205" height="90" rx="5"/>
+    <rect x="750" y="323" width="208" height="90" rx="5"/>
+  </g>
+  <g class="hosted"><rect x="514" y="145" width="205" height="90" rx="5"/><rect x="42" y="323" width="205" height="90" rx="5"/></g>
+  <path d="M250 190H274M486 190H510M722 190H746M250 368H274M486 368H510M722 368H746" class="route" marker-end="url(#arrow)"/>
+  <path d="M854 238V268H145V319" class="route" marker-end="url(#arrow)"/>
+  <text x="54" y="169" class="tag">LOCAL INPUT</text><text x="54" y="196" class="head">Git repository</text><text x="54" y="217" class="body">Tracked text files</text>
+  <text x="290" y="169" class="tag">LOCAL SCRIPT</text><text x="290" y="196" class="head">repo_video.py</text><text x="290" y="217" class="body">prepare → evidence</text>
+  <text x="526" y="169" class="tag">MODEL REQUEST</text><text x="526" y="196" class="head">Claude CLI</text><text x="526" y="217" class="body">Draft five scenes</text>
+  <text x="762" y="169" class="tag">LOCAL FILE</text><text x="762" y="196" class="head">storyboard.json</text><text x="762" y="217" class="body">Review and edit</text>
+  <text x="427" y="292" class="small">repo_video.py render → narration request</text>
+  <text x="54" y="347" class="tag">HOSTED SERVICE</text><text x="54" y="374" class="head">NVIDIA Magpie</text><text x="54" y="395" class="body">TTS Multilingual</text>
+  <text x="290" y="347" class="tag">LOCAL FILES</text><text x="290" y="374" class="head">Narration WAVs</text><text x="290" y="395" class="body">One per scene</text>
+  <text x="526" y="347" class="tag">LOCAL RENDER</text><text x="526" y="374" class="head">Remotion</text><text x="526" y="395" class="body">Scenes + audio</text>
+  <text x="762" y="347" class="tag">OUTPUT</text><text x="762" y="374" class="head">MP4 + SRT</text><text x="762" y="395" class="body">Video + estimated captions</text>
+  <text x="42" y="450" class="small">Magpie is shown as an API service; internal model architecture is outside this figure.</text>
+  <path d="M42 475H958" stroke="#bdcbc6"/>
+  <text x="42" y="497" class="small">Sources: repo_video.py · NVIDIA Magpie TTS API · Remotion composition documentation</text>
+</svg>

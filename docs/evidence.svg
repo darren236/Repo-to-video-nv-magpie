@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence: published Nemotron pilot timeline</title>
+  <desc id="desc">The actual 1864-frame pilot has six shots spanning 62.14 seconds. Four adapt Shotcraft cards, two show source evidence, and the film uses five NVIDIA Magpie narration clips.</desc>
+  <defs>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#1d2b2a}
+      .title{font-size:28px;font-weight:700}.sub{font-size:16px;fill:#586966}.label{font-size:16px;font-weight:700}
+      .small{font-size:13px;fill:#586966}.number{font-size:20px;font-weight:700}.tag{font-size:12px;font-weight:700;fill:#176d5a;letter-spacing:.5px}
+    </style>
+  </defs>
+  <rect width="1000" height="520" fill="#fbfcfa"/>
+  <text x="42" y="57" class="title">Evidence · published Nemotron pilot</text>
+  <text x="42" y="85" class="sub">Actual render · 1,864 frames · 30 fps · 1920 × 1080 · 62.14 seconds</text>
+  <path d="M42 110H958" stroke="#bdcbc6"/>
+  <text x="42" y="143" class="small">0:00</text><text x="911" y="143" class="small">1:02</text>
+  <rect x="42" y="160" width="229" height="88" fill="#d5e7df"/>
+  <rect x="271" y="160" width="123" height="88" fill="#b6dacb"/>
+  <rect x="394" y="160" width="59" height="88" fill="#92c6b2"/>
+  <rect x="453" y="160" width="186" height="88" fill="#64a990"/>
+  <rect x="639" y="160" width="161" height="88" fill="#36836b"/>
+  <rect x="800" y="160" width="158" height="88" fill="#176d5a"/>
+  <text x="54" y="197" class="number">1</text><text x="54" y="226" class="label">Real examples</text>
+  <text x="283" y="197" class="number">2</text><text x="283" y="226" class="small">Workflow</text>
+  <text x="408" y="210" class="number">3</text>
+  <text x="465" y="197" class="number" fill="#fff" style="fill:#fff">4</text><text x="465" y="226" class="label" fill="#fff" style="fill:#fff">Timed words</text>
+  <text x="651" y="197" class="number" fill="#fff" style="fill:#fff">5</text><text x="651" y="226" class="label" fill="#fff" style="fill:#fff">Caption clip</text>
+  <text x="812" y="197" class="number" fill="#fff" style="fill:#fff">6</text><text x="812" y="226" class="label" fill="#fff" style="fill:#fff">Takeaway</text>
+  <path d="M42 159V264M958 159V264" stroke="#bdcbc6"/>
+  <g fill="#fff" stroke="#bdcbc6">
+    <rect x="42" y="287" width="290" height="51" rx="4"/><rect x="350" y="287" width="290" height="51" rx="4"/><rect x="658" y="287" width="300" height="51" rx="4"/>
+    <rect x="42" y="351" width="290" height="51" rx="4"/><rect x="350" y="351" width="290" height="51" rx="4"/><rect x="658" y="351" width="300" height="51" rx="4"/>
+  </g>
+  <text x="55" y="309" class="tag">01 · SHOTCRAFT</text><text x="55" y="328" class="small">Real clip previews · 15.57 s</text>
+  <text x="363" y="309" class="tag">02 · SHOTCRAFT</text><text x="363" y="328" class="small">Terminal journey · 8.33 s</text>
+  <text x="671" y="309" class="tag">03 · SOURCE PROOF</text><text x="671" y="328" class="small">Exact methods SVG · 4.03 s</text>
+  <text x="55" y="373" class="tag">04 · SHOTCRAFT</text><text x="55" y="392" class="small">Real waveform + timed words · 12.60 s</text>
+  <text x="363" y="373" class="tag">05 · SOURCE PROOF</text><text x="363" y="392" class="small">Real caption MP4 · 10.93 s</text>
+  <text x="671" y="373" class="tag">06 · SHOTCRAFT</text><text x="671" y="392" class="small">Magpie voice credit · 10.67 s</text>
+  <text x="42" y="439" class="label">Voice: NVIDIA Magpie TTS Multilingual · Aria · five bundled WAVs</text>
+  <path d="M42 475H958" stroke="#bdcbc6"/>
+  <text x="42" y="497" class="small">Sources: pilot manifest and shot map · target commit 9c2bc01 · timings from the final 1,864-frame composition</text>
+</svg>
