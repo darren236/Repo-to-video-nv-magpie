@@ -1,5 +1,5 @@
 {
-  "title": "Nemotron 3.5 Transcribe — Shotcraft production refresh",
+  "title": "Nemotron 3.5 Transcribe — Shotcraft production with Magpie credit",
   "target_repository": "nemotron-transcribe-demo",
   "target_commit": "9c2bc01eb2ec40657b4689ad6b694c2bf63f4b61",
   "storyboard_source_commit": "fb9a593f7fc110f9c19e31d0a40ce3742dbd220f",
@@ -20,7 +20,7 @@
   "height": 1080,
   "video": {
     "path": "examples/nemotron-transcribe-pilot/pilot.mp4",
-    "sha256": "b122600bd6d80c90693e7ff21a1a1ecf158a84a0714d1419161a441a7742e98b"
+    "sha256": "8e95b2edd0ce3db355437e1660e36ade88aec732092523208563b128789728c7"
   },
   "render_source": "video/src/shotcraft-production.tsx",
   "audio": [
@@ -137,12 +137,23 @@
   "render_source_sha256": "fe9755fae5c519fe0249fabe4014ea040736fd5ed6adf130174eeac1efddf302",
   "shot_map": {
     "path": "examples/nemotron-transcribe-pilot/shot-map.md",
-    "sha256": "9bb94f6dbc24097a461d70af794983f07a0e90587cc9e2293bd856496c0fc367"
+    "sha256": "25a9ff3939000da3bb59c00e7ddb2832b482fa00881c93bdd01a568d5244cd1b"
   },
   "contact_sheet": {
     "path": "examples/nemotron-transcribe-pilot/contact-sheet.png",
-    "sha256": "6bd8a161b325de96391f8f6248a434b977c29e54310e4352d88793f5c3415442"
+    "sha256": "a475ff5f44b80509f6c5ebd1f1aede5e70743bb032abf920fe24be7dd70ed358"
   },
   "narration_reused": true,
-  "package_note": "Public sample: final film, manifest, contact sheet, shot map, captions, selected media, and narration inputs. Earlier renders and intermediate generated projects are retained locally but are not bundled."
+  "package_note": "Public sample: final film with visible Magpie voice credit, manifest, poster, contact sheet, shot map, captions, selected media, and narration inputs. Earlier renders and intermediate generated projects remain local.",
+  "poster": {
+    "path": "examples/nemotron-transcribe-pilot/poster.png",
+    "sha256": "f10898973507329dd208a088c0e2802a5471706d7967e477756881df0ee7333f"
+  },
+  "voice_credit": {
+    "text": "VOICE SYNTHESIS · NVIDIA MAGPIE TTS MULTILINGUAL · ARIA",
+    "location": "final shot",
+    "source_path": "video/src/shotcraft/GroupPhoto.tsx",
+    "source_sha256": "12c80b950ff0ac3d90c0c0e3827527637332c44381309a67f54fb4b5d2e4e115"
+  },
+  "prior_public_video_sha256": "b122600bd6d80c90693e7ff21a1a1ecf158a84a0714d1419161a441a7742e98b"
 }

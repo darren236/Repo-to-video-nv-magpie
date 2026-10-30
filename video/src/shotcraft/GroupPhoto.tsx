@@ -65,6 +65,7 @@ export const GroupPhoto: React.FC = () => {
           {ruleExt>0&&<><div style={{position:'absolute',right:'100%',top:2,width:190*ruleExt,height:1,background:green}}/><div style={{position:'absolute',left:'100%',top:2,width:190*ruleExt,height:1,background:green}}/></>}
         </div>
         <div style={{fontSize:28,letterSpacing:5,color:'#b9c6b1',marginTop:26,opacity:ramp(clamped,68,12,EASE.out)}}>TRACEABLE CAPTIONS FROM REAL RUNS</div>
+        <div style={{fontSize:25,letterSpacing:2.5,color:'#d7e5ce',marginTop:25,opacity:ramp(f,100,18,EASE.out)}}>VOICE SYNTHESIS · NVIDIA MAGPIE TTS MULTILINGUAL · ARIA</div>
       </div>
     </AbsoluteFill>
     <div style={{position:'absolute',left:275,right:275,bottom:48,padding:'17px 28px',border:`1px solid #6b8f47`,background:'#172416ef',borderRadius:12,textAlign:'center',fontSize:25,fontWeight:650,opacity:warning,transform:`translateY(${(1-warning)*15}px)`}}>Unedited model output · review the Artemis radio transcript against its recording</div>
