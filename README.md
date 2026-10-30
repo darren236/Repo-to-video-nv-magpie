@@ -6,11 +6,13 @@ Turn a Git repository into a narrated MP4. **NVIDIA Magpie TTS Multilingual (Ari
 
 [**Watch sample video**](https://darren236.github.io/Repo-to-video-nv-magpie/) · [**Hear Magpie narration**](https://darren236.github.io/Repo-to-video-nv-magpie/#magpie-voice) · [**User guide**](#user-guide)
 
-## Sample video
+## Example: Nemotron repository → video
+
+**Input repository:** [darren236/nemotron-transcribe-h100-demos](https://github.com/darren236/nemotron-transcribe-h100-demos). **Output:** the 62-second film below, made with this project's tailored Shotcraft production route and NVIDIA Magpie narration.
 
 [![Animated preview of the Nemotron sample video, ending with an NVIDIA Magpie voice credit](examples/nemotron-transcribe-pilot/preview.gif)](https://darren236.github.io/Repo-to-video-nv-magpie/)
 
-This 62-second example uses real Nemotron demo output, four adapted [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) shots, and NVIDIA Magpie narration. The GIF preview is silent; [play the full video](https://darren236.github.io/Repo-to-video-nv-magpie/) to hear the voice. [Source repo](https://github.com/darren236/nemotron-transcribe-h100-demos) · [Shot map](examples/nemotron-transcribe-pilot/shot-map.md)
+The film uses real saved output from that input repository and four adapted [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) shots. The GIF preview is silent; [play the full video](https://darren236.github.io/Repo-to-video-nv-magpie/) to hear the voice. [Shot map](examples/nemotron-transcribe-pilot/shot-map.md)
 
 ### NVIDIA Magpie narration
 
@@ -18,7 +20,7 @@ This 62-second example uses real Nemotron demo output, four adapted [video-shotc
 
 ## User Guide
 
-The CLI gathers source excerpts, asks Claude for an editable storyboard, sends narration text to NVIDIA Magpie TTS Multilingual, and renders scenes with Remotion. The [sample video](https://darren236.github.io/Repo-to-video-nv-magpie/) shows the more tailored Shotcraft production route.
+The CLI gathers source excerpts, asks Claude for an editable storyboard, sends narration text to NVIDIA Magpie TTS Multilingual, and renders scenes with Remotion. The [sample video](https://darren236.github.io/Repo-to-video-nv-magpie/) applies the more tailored Shotcraft production route to the separate Nemotron repository.
 
 ### How it works
 
