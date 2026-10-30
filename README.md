@@ -28,13 +28,9 @@ The CLI gathers source excerpts, asks Claude for an editable storyboard, sends n
 
 **Methods.** `prepare` selects tracked text, records SHA-256 hashes, and drafts five scenes. Review the source evidence and storyboard before `render`. The renderer synthesizes one WAV per scene, then creates the MP4 and estimated SRT captions. [Implementation](repo_video.py).
 
-![Evidence diagram: six real shots in the published Nemotron sample video, plus the source assets and Magpie voice](docs/evidence.svg)
-
-**Published example.** The 62.14-second sample has six visual shots: four adapted [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) cards and two source proof shots. It includes saved inference results, the target repository's own methods SVG, a real caption clip, and five Magpie narration WAVs. The final shot credits NVIDIA Magpie TTS Multilingual. See the [shot map](examples/nemotron-transcribe-pilot/shot-map.md) and [manifest](examples/nemotron-transcribe-pilot/manifest.json) for exact source commits and hashes.
-
 ![System diagram: local repository and Remotion stages connected to the Claude CLI and hosted NVIDIA Magpie TTS](docs/system.svg)
 
-**System boundary.** The repository, evidence, storyboard, WAVs, and Remotion render live in this project. Claude CLI drafts the story; NVIDIA Magpie TTS Multilingual synthesizes the voice. The Magpie box represents the hosted service, without claiming anything about its internal architecture.
+**Where it runs.** The source checkout, storyboard, WAVs, and MP4 are saved locally. Claude CLI sends selected source excerpts for storyboard drafting, and hosted NVIDIA Magpie TTS Multilingual receives narration text to make the WAVs. Remotion renders the MP4 on your machine.
 
 ### Set up
 
