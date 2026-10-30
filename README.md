@@ -32,13 +32,15 @@ The CLI gathers source excerpts, asks Claude for an editable storyboard, sends n
 
 ### Set up
 
-You need Python 3.10+, Git, Node.js with npm, an authenticated `claude` CLI, and access to [NVIDIA Magpie TTS Multilingual](https://build.nvidia.com/nvidia/magpie-tts-multilingual/api). Install the pinned Remotion dependencies from the repository root:
+You need Python 3.10+, Git, Node.js with npm, an authenticated [Claude Code CLI](https://code.claude.com/docs/en/setup), and access to [NVIDIA Magpie TTS Multilingual](https://build.nvidia.com/nvidia/magpie-tts-multilingual/api). Install the pinned Remotion dependencies from the repository root:
 
 ```bash
 cd video
 npm ci
 cd ..
 ```
+
+Remotion 4.0.539 may warn that Zod differs from its own pin. This lockfile uses patched Zod 4.6.7 for [GHSA-mrhx-c7xc-m3w5](https://github.com/advisories/GHSA-mrhx-c7xc-m3w5); a clean install, typecheck, and full-timeline test render passed with the override.
 
 Set `NVIDIA_API_KEY` in your environment or in a local `.env` file at the repository root. The `.env` file and generated `projects/` directory are ignored by Git. Do not commit your key.
 
@@ -94,4 +96,4 @@ npx remotion render src/index.ts ShotcraftPilot ../projects/nemotron-transcribe-
 
 `prepare` skips common secret paths, binary assets, and lines resembling credentials, but the filters are not a guarantee. Inspect `evidence.json` before processing a confidential repository: selected excerpts go to Claude, and narration text goes to NVIDIA. The input repository is not modified. The CLI does not capture a running UI or publish the result. Verify claims, media rights, audio, and caption timing before sharing.
 
-This project's original code and documentation use the [MIT License](LICENSE). Adapted Shotcraft material retains its [Apache 2.0 notice](THIRD_PARTY_NOTICES.md).
+Original code and documentation use the [MIT License](LICENSE). The bundled video, narration, source demo media, and Shotcraft-derived code have separate terms; see [third-party and media notices](THIRD_PARTY_NOTICES.md).

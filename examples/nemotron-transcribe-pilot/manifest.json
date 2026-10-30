@@ -137,7 +137,7 @@
   "render_source_sha256": "fe9755fae5c519fe0249fabe4014ea040736fd5ed6adf130174eeac1efddf302",
   "shot_map": {
     "path": "examples/nemotron-transcribe-pilot/shot-map.md",
-    "sha256": "25a9ff3939000da3bb59c00e7ddb2832b482fa00881c93bdd01a568d5244cd1b"
+    "sha256": "e93bdc19cc84a8645cfc2cd9d2d0a74ac896e148c860ea37614968dd026f23ce"
   },
   "contact_sheet": {
     "path": "examples/nemotron-transcribe-pilot/contact-sheet.png",
