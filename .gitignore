@@ -1,0 +1,12 @@
+.env
+.env.*
+!*.example
+video/node_modules/
+video/public/runs/*
+!video/public/runs/935332660c0f/
+third_party/video-shotcraft-upstream/
+projects/
+.cache/
+.remotion/
+*.pyc
+__pycache__/

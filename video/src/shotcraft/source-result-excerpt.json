@@ -1,0 +1,45 @@
+{
+  "audio_file": "demo_conversation.wav",
+  "audio_sha256": "2e3cc6ad2193fa3fe25b2fe2867af4a4ba2190a244c5387afd71c0810665edac",
+  "audio_duration_seconds": 34.2373125,
+  "alignment_error": null,
+  "first_words": [
+    {
+      "word": "I",
+      "start": 0.02,
+      "end": 0.24,
+      "speaker": "0"
+    },
+    {
+      "word": "have",
+      "start": 0.24,
+      "end": 0.32,
+      "speaker": "0"
+    },
+    {
+      "word": "a",
+      "start": 0.32,
+      "end": 0.48,
+      "speaker": "0"
+    },
+    {
+      "word": "recording",
+      "start": 0.48,
+      "end": 0.96,
+      "speaker": "0"
+    },
+    {
+      "word": "from",
+      "start": 0.96,
+      "end": 1.12,
+      "speaker": "0"
+    },
+    {
+      "word": "our",
+      "start": 1.12,
+      "end": 1.36,
+      "speaker": "0"
+    }
+  ],
+  "word_count": 90
+}

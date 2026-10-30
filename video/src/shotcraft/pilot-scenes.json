@@ -1,0 +1,88 @@
+{
+  "repoName": "nemotron-transcribe-demo",
+  "commit": "fb9a593f7fc110f9c19e31d0a40ce3742dbd220f",
+  "scenes": [
+    {
+      "title": "Real transcription, word by word",
+      "narration": "This repository demonstrates NVIDIA Nemotron 3.5 Transcribe on a single H one hundred GPU. Three real inference recordings show timed captions: a two-person conversation, a historical speech, and NASA radio.",
+      "visual": "cards",
+      "nodes": [
+        "Two-speaker conversation",
+        "JFK speech",
+        "Artemis mission radio"
+      ],
+      "sourcePaths": [
+        "README.md",
+        "demos/README.md"
+      ],
+      "audio": "runs/935332660c0f/scene-01.wav",
+      "durationFrames": 467
+    },
+    {
+      "title": "How the pieces fit",
+      "narration": "NeMo Speech and vLLM serve the model. Python scripts submit audio, save responses, verify timing, and build captions. Remotion turns those saved results into short videos.",
+      "visual": "flow",
+      "nodes": [
+        "vLLM + NeMo Speech",
+        "Python client scripts",
+        "Remotion video"
+      ],
+      "sourcePaths": [
+        "README.md",
+        "video/README.md"
+      ],
+      "audio": "runs/935332660c0f/scene-02.wav",
+      "durationFrames": 371
+    },
+    {
+      "title": "From WAV to verified result",
+      "narration": "A mono wave file enters the transcription request. The saved JSON includes text, word times, speaker tags, and an audio hash. Caption export checks the hash and alignment.",
+      "visual": "flow",
+      "nodes": [
+        "Mono 16 kHz WAV",
+        "vLLM request",
+        "JSON with word times",
+        "Hash check"
+      ],
+      "sourcePaths": [
+        "README.md",
+        "scripts/export_srt.py"
+      ],
+      "audio": "runs/935332660c0f/scene-03.wav",
+      "durationFrames": 378
+    },
+    {
+      "title": "Example: the two-speaker dialogue",
+      "narration": "The conversation demo runs thirty-four seconds and has six speaker turns. Its subtitle script groups aligned words by speaker, sentence ending, and pause, making the timeline readable.",
+      "visual": "code",
+      "nodes": [
+        "demo_conversation.wav",
+        "make_srt cues",
+        "audit_run.py check"
+      ],
+      "sourcePaths": [
+        "demos/README.md",
+        "scripts/finalize_run.py",
+        "scripts/audit_run.py"
+      ],
+      "audio": "runs/935332660c0f/scene-04.wav",
+      "durationFrames": 328
+    },
+    {
+      "title": "Takeaway: traceable captions",
+      "narration": "Each clip remains tied to the audio and raw response that produced it. The output is unedited, including errors, so the radio transcript needs listening review before reuse.",
+      "visual": "cards",
+      "nodes": [
+        "Hash-bound results",
+        "Alignment checked",
+        "Unedited output"
+      ],
+      "sourcePaths": [
+        "scripts/build_gallery.py",
+        "video/README.md"
+      ],
+      "audio": "runs/935332660c0f/scene-05.wav",
+      "durationFrames": 320
+    }
+  ]
+}

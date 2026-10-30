@@ -1,0 +1,148 @@
+{
+  "title": "Nemotron 3.5 Transcribe — Shotcraft production refresh",
+  "target_repository": "nemotron-transcribe-demo",
+  "target_commit": "9c2bc01eb2ec40657b4689ad6b694c2bf63f4b61",
+  "storyboard_source_commit": "fb9a593f7fc110f9c19e31d0a40ce3742dbd220f",
+  "shotcraft_repository": "Vincentwei1021/video-shotcraft",
+  "shotcraft_commit": "1266a3ec4831289c4d893d42dd5102723658039a",
+  "shotcraft_cards": [
+    "spotlight-hero-card",
+    "terminal-3d",
+    "voice-waveform-live",
+    "outro-group-photo-launch"
+  ],
+  "voice_model": "magpie-tts-multilingual",
+  "voice": "Magpie-Multilingual.EN-US.Aria",
+  "fps": 30,
+  "frames": 1864,
+  "duration_seconds": 62.144,
+  "width": 1920,
+  "height": 1080,
+  "video": {
+    "path": "examples/nemotron-transcribe-pilot/pilot.mp4",
+    "sha256": "b122600bd6d80c90693e7ff21a1a1ecf158a84a0714d1419161a441a7742e98b"
+  },
+  "render_source": "video/src/shotcraft-production.tsx",
+  "audio": [
+    {
+      "path": "video/public/runs/935332660c0f/scene-01.wav",
+      "sha256": "72834e686b4550d56b7000bfc780be788db5e4c639fa9fd957abcf2a5e21788b"
+    },
+    {
+      "path": "video/public/runs/935332660c0f/scene-02.wav",
+      "sha256": "955885a2a246017c36f2d5af2ba4b3a59b90e168de1d4560ab52b269d623b172"
+    },
+    {
+      "path": "video/public/runs/935332660c0f/scene-03.wav",
+      "sha256": "72360d06f10cd5b9c97aa405fb2e7b5a8ed2e9c0f91bed9b9a7808fa9aacd7fb"
+    },
+    {
+      "path": "video/public/runs/935332660c0f/scene-04.wav",
+      "sha256": "dedd4dcadba19d245ad76b4c04a0be29adb1bdfbdd5af50588f87b685598029e"
+    },
+    {
+      "path": "video/public/runs/935332660c0f/scene-05.wav",
+      "sha256": "df58fb1d75827fe17812a36a93e6ef69f6676c9250480d5e5061d63184adbae1"
+    }
+  ],
+  "visual_assets": [
+    {
+      "path": "video/public/shotcraft/conversation.png",
+      "sha256": "5151f0400295708a013fc3ba6084f5099924f91eeb5a1e299bfbac3a59cafcf5"
+    },
+    {
+      "path": "video/public/shotcraft/jfk.png",
+      "sha256": "f1022ec87496a6cc31e415d4045d9ff809e44418d864de59cdbac1f4bfbf74b0"
+    },
+    {
+      "path": "video/public/shotcraft/artemis.png",
+      "sha256": "f0b6976a1461c30a3304bc78f8bd05b4d4b00829aa51d77d43dd9a1dc5fe6e67"
+    },
+    {
+      "path": "video/public/shotcraft/conversation-caption.mp4",
+      "sha256": "812356ac47836d7ab5b086b0b2078befbae8d2d03cd403bd382f74a2afa6c871"
+    },
+    {
+      "path": "video/public/shotcraft/video-workflow.svg",
+      "sha256": "b748801791be15a47960b4509c0787b197cefb1e80790938a975ca71947543ac",
+      "source_path": "site/video-workflow.svg",
+      "source_commit": "9c2bc01eb2ec40657b4689ad6b694c2bf63f4b61",
+      "introduced_commit": "17499c07109559ccb50757b1c4918054ae735219"
+    }
+  ],
+  "captions": {
+    "path": "examples/nemotron-transcribe-pilot/captions.srt",
+    "timing": "sentence-length estimates; not word aligned",
+    "sha256": "e9c2cb874cf288ea8649bce5135ff4671b758a67eec80e54ff81112d0a6cd403"
+  },
+  "workbench_integration": false,
+  "evidence_files": [
+    {
+      "path": "README.md",
+      "sha256": "d9f0c8ad1ebceee8fb5e0208052a9cfc8380ef33dc681650bad5403ed8c75d89"
+    },
+    {
+      "path": "demos/README.md",
+      "sha256": "7600f1f61ac24edc1004f2298dc996ca2ed12932149fed52f14610f79bc283a0"
+    },
+    {
+      "path": "runs/gallery_manifest.json",
+      "sha256": "9f544ce59b288dbb39f6564b1fe7cfc51bef7e945259ea765884c61c5397f7ed"
+    },
+    {
+      "path": "runs/demo_conversation.json",
+      "sha256": "649a3776e73111486937cd38937a892b987d4a097788c2eca803d1f5c59b1481"
+    },
+    {
+      "path": "assets/demo_conversation.wav",
+      "sha256": "2e3cc6ad2193fa3fe25b2fe2867af4a4ba2190a244c5387afd71c0810665edac"
+    },
+    {
+      "path": "video/out/conversation-caption.mp4",
+      "sha256": "812356ac47836d7ab5b086b0b2078befbae8d2d03cd403bd382f74a2afa6c871"
+    },
+    {
+      "path": "video/out/jfk-caption.mp4",
+      "sha256": "86a97bf095f286f1f879789b5bdc3f8ad872553237fbc777532c2895a33f943d"
+    },
+    {
+      "path": "video/out/artemis-caption.mp4",
+      "sha256": "01bcd87258a383a430f52e3a9b0b99cc6202a862ac193859e054cc3228712242"
+    },
+    {
+      "path": "scripts/build_gallery.py",
+      "sha256": "1f9357d82c27992c91c78df160772a76d8302e5eae7705ddecd757156a2fb7a3"
+    },
+    {
+      "path": "scripts/transcribe.py",
+      "sha256": "68a43ee9923f8766eed6130f8e02848eaf2180df990785e5dbbcc9313b7ef89b"
+    },
+    {
+      "path": "video/README.md",
+      "sha256": "c37f21c813887339ee7ba15ad6bd6840eb2d513edbcf2ace0329f9fcb273778b"
+    },
+    {
+      "path": "site/video-workflow.svg",
+      "sha256": "b748801791be15a47960b4509c0787b197cefb1e80790938a975ca71947543ac"
+    }
+  ],
+  "previous_target_commit": "eb6b58ab6bf3485e88368940687561149ba26588",
+  "target_worktree_clean": true,
+  "source_delta": "Since the first render, README methods copy and two source figures changed. The film uses the video methods SVG introduced at 17499c0. The 9c2bc01 user-guide figure is outside this film; saved audio, JSON, caption MP4s and scripts retain their prior hashes.",
+  "previous_video": {
+    "path": "projects/nemotron-transcribe-pilot/video-shotcraft-production.mp4",
+    "sha256": "19912428c3884c51f374de6a00a283b922dcd7f2ecb20c40e0930efe54c6b329",
+    "bundled": false
+  },
+  "render_source_sha256": "fe9755fae5c519fe0249fabe4014ea040736fd5ed6adf130174eeac1efddf302",
+  "shot_map": {
+    "path": "examples/nemotron-transcribe-pilot/shot-map.md",
+    "sha256": "9bb94f6dbc24097a461d70af794983f07a0e90587cc9e2293bd856496c0fc367"
+  },
+  "contact_sheet": {
+    "path": "examples/nemotron-transcribe-pilot/contact-sheet.png",
+    "sha256": "6bd8a161b325de96391f8f6248a434b977c29e54310e4352d88793f5c3415442"
+  },
+  "narration_reused": true,
+  "package_note": "Public sample: final film, manifest, contact sheet, shot map, captions, selected media, and narration inputs. Earlier renders and intermediate generated projects are retained locally but are not bundled."
+}
