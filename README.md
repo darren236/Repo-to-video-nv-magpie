@@ -8,9 +8,9 @@ Turn a Git repository into a narrated MP4. Claude drafts a sourced storyboard, N
 
 ## Sample video
 
-[![Preview of the Nemotron sample video with a visible NVIDIA Magpie voice credit](examples/nemotron-transcribe-pilot/poster.png)](https://darren236.github.io/Repo-to-video-nv-magpie/)
+[![Animated preview of the Nemotron sample video, ending with an NVIDIA Magpie voice credit](examples/nemotron-transcribe-pilot/preview.gif)](https://darren236.github.io/Repo-to-video-nv-magpie/)
 
-This 62-second example uses real Nemotron demo output, four adapted [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) shots, and NVIDIA Magpie narration. [Play the full video](https://darren236.github.io/Repo-to-video-nv-magpie/) · [Source repo](https://github.com/darren236/nemotron-transcribe-h100-demos) · [Shot map](examples/nemotron-transcribe-pilot/shot-map.md)
+This 62-second example uses real Nemotron demo output, four adapted [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) shots, and NVIDIA Magpie narration. The GIF preview is silent; [play the full video](https://darren236.github.io/Repo-to-video-nv-magpie/) to hear the voice. [Source repo](https://github.com/darren236/nemotron-transcribe-h100-demos) · [Shot map](examples/nemotron-transcribe-pilot/shot-map.md)
 
 ## User Guide
 
@@ -83,7 +83,7 @@ This writes `video-shotcraft-ink.mp4` and its manifest beside the original outpu
 
 ### Inspect or rebuild the bundled sample
 
-[Watch sample video](https://darren236.github.io/Repo-to-video-nv-magpie/), view its [poster](examples/nemotron-transcribe-pilot/poster.png), or inspect the [contact sheet](examples/nemotron-transcribe-pilot/contact-sheet.png). The [manifest](examples/nemotron-transcribe-pilot/manifest.json) identifies the target source commit, Shotcraft revision, Magpie voice, and hashes for the bundled media. The original storyboard and Magpie WAVs were created from an earlier source commit; the [shot map](examples/nemotron-transcribe-pilot/shot-map.md) explains the later source refresh.
+[Watch sample video](https://darren236.github.io/Repo-to-video-nv-magpie/), view its [GIF preview](examples/nemotron-transcribe-pilot/preview.gif) or [poster](examples/nemotron-transcribe-pilot/poster.png), or inspect the [contact sheet](examples/nemotron-transcribe-pilot/contact-sheet.png). The [manifest](examples/nemotron-transcribe-pilot/manifest.json) identifies the target source commit, Shotcraft revision, Magpie voice, and hashes for the bundled media. The original storyboard and Magpie WAVs were created from an earlier source commit; the [shot map](examples/nemotron-transcribe-pilot/shot-map.md) explains the later source refresh.
 
 From `video/`, rebuild the editable Remotion composition with the bundled WAVs and media. This render does not request new speech:
 

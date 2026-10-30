@@ -144,10 +144,20 @@
     "sha256": "a475ff5f44b80509f6c5ebd1f1aede5e70743bb032abf920fe24be7dd70ed358"
   },
   "narration_reused": true,
-  "package_note": "Public sample: final film with visible Magpie voice credit, manifest, poster, contact sheet, shot map, captions, selected media, and narration inputs. Earlier renders and intermediate generated projects remain local.",
+  "package_note": "Public sample: final film with visible Magpie voice credit, silent GIF preview, manifest, poster, contact sheet, shot map, captions, selected media, and narration inputs. Earlier renders and intermediate generated projects remain local.",
   "poster": {
     "path": "examples/nemotron-transcribe-pilot/poster.png",
     "sha256": "f10898973507329dd208a088c0e2802a5471706d7967e477756881df0ee7333f"
+  },
+  "preview": {
+    "path": "examples/nemotron-transcribe-pilot/preview.gif",
+    "sha256": "f08a15cbdce043a01d424a74d2f8850bdc2289600224f8993f5c440e98286899",
+    "source": "clips from the bundled pilot.mp4; silent GIF",
+    "source_ranges_seconds": [[1.5, 3.0], [17.0, 18.5], [25.0, 26.2], [32.0, 33.5], [43.5, 45.0], [55.7, 59.0]],
+    "size": "768x432",
+    "frame_rate": 8,
+    "frames": 86,
+    "duration_seconds": 10.76
   },
   "voice_credit": {
     "text": "VOICE SYNTHESIS · NVIDIA MAGPIE TTS MULTILINGUAL · ARIA",
