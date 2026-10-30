@@ -1,16 +1,20 @@
 # Repo-to-video-nv-magpie
 
-Turn a Git repository into a narrated MP4. Claude drafts a sourced storyboard, NVIDIA Magpie TTS Multilingual makes the voice, and Remotion renders the video.
+Turn a Git repository into a narrated MP4. **NVIDIA Magpie TTS Multilingual (Aria) synthesizes the voice**; Claude drafts a sourced storyboard and Remotion renders the video.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-[**Watch sample video**](https://darren236.github.io/Repo-to-video-nv-magpie/) · [**User Guide: create a narrated repo video**](#user-guide)
+[**Watch sample video**](https://darren236.github.io/Repo-to-video-nv-magpie/) · [**Hear Magpie narration**](https://darren236.github.io/Repo-to-video-nv-magpie/#magpie-voice) · [**User guide**](#user-guide)
 
 ## Sample video
 
 [![Animated preview of the Nemotron sample video, ending with an NVIDIA Magpie voice credit](examples/nemotron-transcribe-pilot/preview.gif)](https://darren236.github.io/Repo-to-video-nv-magpie/)
 
 This 62-second example uses real Nemotron demo output, four adapted [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) shots, and NVIDIA Magpie narration. The GIF preview is silent; [play the full video](https://darren236.github.io/Repo-to-video-nv-magpie/) to hear the voice. [Source repo](https://github.com/darren236/nemotron-transcribe-h100-demos) · [Shot map](examples/nemotron-transcribe-pilot/shot-map.md)
+
+### NVIDIA Magpie narration
+
+[Listen to a 15-second Aria clip](https://darren236.github.io/Repo-to-video-nv-magpie/#magpie-voice) from the published film. Magpie synthesized five narration WAVs from the reviewed script; Remotion places them on the video timeline. Nemotron is the transcription model demonstrated in the film. [Voice ID and audio hashes](examples/nemotron-transcribe-pilot/manifest.json) · [Synthesis code](repo_video.py)
 
 ## User Guide
 
